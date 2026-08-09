@@ -1,0 +1,21 @@
+{
+  "name": "venue-monitor-server",
+  "version": "1.0.0",
+  "description": "手机服务器监控系统 - 后端服务",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node src/index.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^11.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
+    "multer": "^2.2.0",
+    "ws": "^8.18.0"
+  }
+}

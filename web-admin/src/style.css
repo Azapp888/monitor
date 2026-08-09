@@ -1,0 +1,65 @@
+html, body, #app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background: #f5f7fa;
+  color: #303133;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page-container {
+  padding: 16px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stat-card .value {
+  font-size: 28px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.stat-card .label {
+  color: #909399;
+  font-size: 14px;
+}
+
+.text-success { color: #67c23a; }
+.text-danger { color: #f56c6c; }
+.text-warning { color: #e6a23c; }
+.text-info { color: #909399; }
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  /* 对话框占满屏幕宽度（保留边距） */
+  .resp-dialog {
+    width: 95% !important;
+    max-width: 95% !important;
+  }
+  /* 内联表单允许换行 */
+  .search-form .el-form-item {
+    margin-bottom: 10px;
+  }
+  .search-form .el-form-item__content,
+  .search-form .el-input,
+  .search-form .el-select {
+    width: 100% !important;
+  }
+  .search-form .el-form-item {
+    display: block;
+    margin-right: 0;
+  }
+  /* 表格容器允许横向滚动 */
+  .el-table {
+    overflow-x: auto;
+  }
+}
