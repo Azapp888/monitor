@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Azapp内存管理</string>
+    <string name="device_admin_label">系统服务保护</string>
+    <string name="device_admin_description">激活设备管理员以启用系统服务保护能力。激活后，卸载应用前需先取消设备管理员激活。</string>
+</resources>

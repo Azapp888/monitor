@@ -1,0 +1,4 @@
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_launcher_cat"
+    android:inset="25%"
+    android:gravity="center" />

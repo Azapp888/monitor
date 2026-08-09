@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#F5F7FA"
+    android:padding="24dp">
+
+    <!-- 应用 Logo / 标题 -->
+    <ImageView
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="80dp"
+        android:src="@mipmap/ic_launcher_round"
+        android:contentDescription="应用图标" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Azapp内存管理"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#333333" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="正在初始化..."
+        android:textSize="13sp"
+        android:textColor="#999999" />
+
+    <!-- 进度条 -->
+    <ProgressBar
+        android:id="@+id/progressSplash"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:layout_marginTop="36dp"
+        android:max="100"
+        android:progress="0"
+        android:progressTint="#4ECDC4" />
+
+    <!-- 当前步骤提示 -->
+    <TextView
+        android:id="@+id/tvSplashStep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textSize="13sp"
+        android:textColor="#666666" />
+
+    <!-- 检测项列表 -->
+    <LinearLayout
+        android:id="@+id/layoutChecks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tvCheckNetwork"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="网络连接"
+                android:textSize="14sp"
+                android:textColor="#333333" />
+
+            <TextView
+                android:id="@+id/tvCheckNetworkStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="待检测"
+                android:textSize="13sp"
+                android:textColor="#999999" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tvCheckServer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="服务器响应"
+                android:textSize="14sp"
+                android:textColor="#333333" />
+
+            <TextView
+                android:id="@+id/tvCheckServerStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="待检测"
+                android:textSize="13sp"
+                android:textColor="#999999" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tvCheckDevice"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="设备功能完整性"
+                android:textSize="14sp"
+                android:textColor="#333333" />
+
+            <TextView
+                android:id="@+id/tvCheckDeviceStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="待检测"
+                android:textSize="13sp"
+                android:textColor="#999999" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 错误详情 -->
+    <TextView
+        android:id="@+id/tvSplashError"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text=""
+        android:textSize="12sp"
+        android:textColor="#E74C3C"
+        android:visibility="gone" />
+
+    <!-- 重试按钮 -->
+    <Button
+        android:id="@+id/btnRetry"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:text="重新检测"
+        android:textSize="15sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/clean_button_bg"
+        android:visibility="gone" />
+
+    <!-- 继续按钮（仅警告但不致命时显示） -->
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:text="仍然继续"
+        android:textSize="15sp"
+        android:textColor="#666666"
+        android:background="#E0E0E0"
+        android:visibility="gone" />
+
+</LinearLayout>
